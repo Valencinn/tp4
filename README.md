@@ -184,6 +184,21 @@ El carrito debe contemplar productos customizados. Dos productos con el mismo ID
 
 El usuario debe poder marcar productos como favoritos.
 
+Se debe crear la ruta:
+
+```bash
+/favorites
+```
+
+Esta pantalla debe mostrar el listado de productos favoritos del usuario activo.
+
+La pantalla de favoritos debe permitir:
+
+- Visualizar los productos guardados como favoritos.
+- Acceder al detalle de cada producto.
+- Quitar productos de favoritos.
+- Mostrar un mensaje claro si el usuario no tiene favoritos cargados.
+
 Cuando un producto se agrega a favoritos:
 
 - Debe actualizarse el estado `favorites` del context.
@@ -293,6 +308,7 @@ La aplicacion debe contar con las siguientes rutas:
 /category/[id]
 /product/[id]
 /cart
+/favorites
 /checkout
 /dashboard
 /dashboard/products
@@ -458,6 +474,7 @@ Se evaluara:
 - Funcionamiento de las rutas publicas y privadas solicitadas.
 - Correcto uso del context global.
 - Persistencia de usuarios, favoritos y ordenes.
+- Funcionamiento de la pantalla de favoritos.
 - Funcionamiento del carrito con productos customizados.
 - Creacion correcta de orders con numero secuencial.
 - Calidad del diseño implementado con TailwindCSS.
