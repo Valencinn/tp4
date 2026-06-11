@@ -9,19 +9,16 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-10 text-slate-900">
       <div className="mx-auto max-w-6xl">
-        <section className="mb-8">
-          <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">
-            Programacion 3
-          </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold">
-            Productos
-          </h1>
-          <p className="mt-4 max-w-2xl text-base text-slate-600">
-            Catalogo publico del ecommerce. La administracion queda disponible
-            en /dashboard.
-          </p>
-        </section>
-
+        <div className="col-span-2 px-6 lg:px-0 lg:pt-4"></div>
+        <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start"></div>
+        <div className="absolute w-28 left-0 -top-20 hidden lg:block">
+          <img src="/snake-1.png" alt="Snake 1" className="w-full" />
+        </div>
+        <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">Build your own
+          <span className="bg-green-600 px-2 text-white">Custom</span> keyboard</h1>
+        <p className="mt-8 text-lg lg:pr-20 max-w-prose text-center lg:text-center text-balance md:text-wrap">
+          Based on your preferences create your own, <span className="font-semibold"> one-of-one</span> keyboard.
+        </p>
         <ProductGrid products={products} />
       </div>
     </main>
