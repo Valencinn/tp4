@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { getProductById, getProductsByCategory } from "@/lib/products";
 import ProductGrid from "@/components/ProductGrid";
+import { Heart } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -104,7 +105,7 @@ export default async function ProductPage({ params }) {
                             </span>
                         </p>
 
-                        {/* Acciones */}
+                        {/* boton de carrito y de fav*/}
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                             <button
                                 disabled={product.stock === 0}
@@ -112,14 +113,15 @@ export default async function ProductPage({ params }) {
                             >
                                 Agregar al carrito
                             </button>
-                            <button className="rounded-lg border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-colors">
-                                ♡ Agregar a favoritos
+                            <button className="flex items-center justify-center gap-2 rounded-lg border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100">
+                                <Heart className="h-4 w-4" />
+                                Agregar a favoritos
                             </button>
                         </div>
                     </div>
                 </div>
 
-                {/*productos de la misma categroria*/}
+                {/*productos de la misma categro*/}
                 {relatedProducts.length > 0 && (
                     <section className="mt-16">
                         <h2 className="mb-6 text-xl font-semibold text-slate-900">
